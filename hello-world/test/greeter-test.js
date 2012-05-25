@@ -15,6 +15,11 @@ buster.testCase("Greeter", {
     "calls printer with hello": function() {
         greeter.greet();
         assert.match(printer.print.firstCall.args[0], /Hello/);
+    },
+    
+    "calls printer with world": function() {
+        greeter.greet()
+        assert.match(printer.print.firstCall.args[0], /world/)
     }
 
 });
