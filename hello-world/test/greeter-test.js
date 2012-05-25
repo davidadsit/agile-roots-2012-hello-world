@@ -1,19 +1,20 @@
 var buster = require('buster');
 var sinon = require('sinon');
-var helloWorld = require('../lib/greeter');
+var greeter = require('../lib/greeter');
+var printer = require('../lib/printer');
 
 buster.testCase("Greeter", {
     setUp: function() {
-        sinon.spy(console, "log");
+        sinon.spy(printer, "print");
     },
 
     tearDown: function() {
-        console.log.restore();
+        printer.print.restore();
     },
 
-    "calls console log with hello": function() {
-        helloWorld.greeter.greet();
-        assert.match(console.log.firstCall.args[0], /Hello/);
+    "calls printer with hello": function() {
+        greeter.greet();
+        assert.match(printer.print.firstCall.args[0], /Hello/);
     }
 
 });

@@ -1,8 +1,8 @@
-// file greeter-test.js
+var printer = require('./printer')
+
 var greeter = {
     greet: function() {
-        console.log("Hello, world!");
+        printer.print("Hello, world!");
     }
 }
-module.exports.greeter = greeter
-greeter.greet()
+module.exports = greeter

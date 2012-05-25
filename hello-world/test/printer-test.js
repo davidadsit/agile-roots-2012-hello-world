@@ -12,7 +12,7 @@ buster.testCase("Printer", {
     },
 
     "calls console log with message": function() {
-        printer.printer.print("message");
+        printer.print("message");
         assert.match(console.log.firstCall.args[0], /message/);
     }
 

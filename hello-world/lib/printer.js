@@ -4,4 +4,4 @@ var printer = {
   }
 }
 
-module.exports.printer = printer
+module.exports = printer
