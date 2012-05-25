@@ -1,6 +1,6 @@
 var buster = require('buster');
 var sinon = require('sinon');
-var greeter = require('../lib/greeter');
+var helloWorld = require('../lib/greeter');
 
 buster.testCase("Greeter", {
     setUp: function() {
@@ -12,7 +12,7 @@ buster.testCase("Greeter", {
     },
 
     "calls console log with hello": function() {
-        greeter.greet();
+        helloWorld.greeter.greet();
         assert.match(console.log.firstCall.args[0], /Hello/);
     }
 

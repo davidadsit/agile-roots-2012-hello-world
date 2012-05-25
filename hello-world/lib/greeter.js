@@ -4,5 +4,5 @@ var greeter = {
         console.log("Hello, world!");
     }
 }
-
+module.exports.greeter = greeter
 greeter.greet()
